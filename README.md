@@ -15,7 +15,7 @@ A simple Java-based e-commerce checkout system that supports:
 
 ##  Project Structure
 
-```
+```markdown
 ecommerce/
 ├── models/
 │   ├── Product.java
