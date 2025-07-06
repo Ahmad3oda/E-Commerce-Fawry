@@ -10,8 +10,8 @@ import java.util.Map;
 public class ShippingService implements ShippingServiceInterface {
     @Override
     public void ship(ArrayList<Shippable> items) {
-        Map<String, Integer> itemCounts = new HashMap<>();
-        Map<String, Double> itemWeights = new HashMap<>();
+        Map<String, Integer> itemFreq = new HashMap<>();
+        Map<String, Double> itemWeight = new HashMap<>();
 
         double totalWeight = 0;
 
@@ -19,15 +19,15 @@ public class ShippingService implements ShippingServiceInterface {
             String name = item.getName();
             double weight = item.getWeight();
 
-            itemCounts.put(name, itemCounts.getOrDefault(name, 0) + 1);
-            itemWeights.put(name, weight);
+            itemFreq.put(name, itemCounts.getOrDefault(name, 0) + 1);
+            itemWeight.put(name, weight);
             totalWeight += weight;
         }
 
         System.out.println("----------------------");
         for (String name : itemCounts.keySet()) {
-            int count = itemCounts.get(name);
-            double weight = itemWeights.get(name);
+            int count = itemFreq.get(name);
+            double weight = itemWeight.get(name);
             System.out.printf("%dx %s %.0fkg%n", count, name, weight);
         }
 
