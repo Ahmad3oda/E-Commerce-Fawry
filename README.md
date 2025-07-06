@@ -16,7 +16,6 @@ A simple Java-based e-commerce checkout system that supports:
 ##  Project Structure
 
 ```
-
 ecommerce/
 ├── models/
 │   ├── Product.java
@@ -34,12 +33,11 @@ ecommerce/
 │   └── CheckoutServiceInterface.java
 │   └── ShippingServiceInterface.java│
 └── Main.java
-
 ````
 
 ---
 
-## 🧪 Sample Scenario
+## Sample Scenario
 
 ```java
 Customer customer = new Customer("Ali", 10000, "6 October");
