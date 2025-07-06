@@ -1,7 +1,6 @@
 # E-Commerce-Fawry
 Direct Path for the project code: ECommerceSystem/src/main/java/ECommerce
 
-```markdown
 # Simple E-Commerce Checkout System
 
 A simple Java-based e-commerce checkout system that supports:
@@ -61,7 +60,7 @@ shippingService.ship(checkoutService.getShippableItems());
 
 ---
 
-## 🖨️ Sample Output
+## Sample Output
 
 ```
 ** Checkout receipt **
@@ -81,7 +80,7 @@ Total package weight 62.0kg
 
 ---
 
-## ✅ Requirements & Behavior
+## Requirements & Behavior
 
 * Products have: name, price, quantity
 * Products may optionally:
@@ -102,7 +101,7 @@ Total package weight 62.0kg
 
 ---
 
-## ▶️ Run Instructions
+## Run Instructions
 
 * Java 8+ required
 * Compile and run `Main.java` from your IDE or terminal
