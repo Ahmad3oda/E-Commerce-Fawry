@@ -106,7 +106,3 @@ Total package weight 62.0kg
 * Java 8+ required
 * Compile and run `Main.java` from your IDE or terminal
 
----
-
-```
-```
