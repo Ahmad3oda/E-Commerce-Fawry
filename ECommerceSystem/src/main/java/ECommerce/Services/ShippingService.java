@@ -24,10 +24,11 @@ public class ShippingService implements ShippingServiceInterface {
             totalWeight += weight;
         }
 
+        System.out.println("----------------------");
         for (String name : itemCounts.keySet()) {
             int count = itemCounts.get(name);
-            double weight = itemWeights.get(name) * 1000;
-            System.out.printf("%dx %s %.0fg%n", count, name, weight);
+            double weight = itemWeights.get(name);
+            System.out.printf("%dx %s %.0fkg%n", count, name, weight);
         }
 
         System.out.printf("Total package weight %.1fkg%n", totalWeight);

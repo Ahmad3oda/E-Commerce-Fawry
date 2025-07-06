@@ -12,6 +12,12 @@ import java.util.ArrayList;
 
 public class CheckoutService implements CheckoutServiceInterface {
 
+    ArrayList<Shippable> shippableItems;
+
+    public CheckoutService() {
+        this.shippableItems = new ArrayList<>();
+    }
+
     @Override
     public void checkout(Customer customer){
         if(customer.getCart().isEmpty()){
@@ -19,7 +25,6 @@ public class CheckoutService implements CheckoutServiceInterface {
         }
 
         ArrayList<CartItem> cartList = customer.getCart().getCartItems();
-        ArrayList<Shippable> shippableItems = new ArrayList<>();
         double itemsPrice = customer.getCart().getTotalPrice();
         double itemsTotalWeight = 0;
 
@@ -38,9 +43,9 @@ public class CheckoutService implements CheckoutServiceInterface {
             }
         }
 
-        double kgPrice = 30;
+        double kgPrice = 1.5;
         double shippingFees = itemsTotalWeight * kgPrice;
-        double totalPrice = itemsTotalWeight + shippingFees;
+        double totalPrice = itemsPrice + shippingFees;
 
         if(customer.getBalance() < totalPrice){
             throw new IllegalStateException("Insufficient balance.");
@@ -87,4 +92,9 @@ public class CheckoutService implements CheckoutServiceInterface {
         }
         return product;
     }
+
+    public ArrayList<Shippable> getShippableItems() {
+        return shippableItems;
+    }
+
 }
